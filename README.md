@@ -15,5 +15,20 @@ This project analyzes sales and profit using Power BI.
 - Analyzed sales trends
 - Compared profit by category
 
+## DAX Measures Used
+
+Total Sales = SUM(Sales)
+
+Total Profit = SUM(Profit)
+
+Average Sales = AVERAGE(Sales)
+
+Profit Ratio = DIVIDE(SUM(Profit), SUM(Sales))
+
+Total Orders = DISTINCTCOUNT(Order ID)
+
 ## Dashboard
 ![Dashboard Screenshot](dashboard.png)
+
+
+
