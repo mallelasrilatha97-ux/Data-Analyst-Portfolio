@@ -19,3 +19,56 @@ optimize product strategy to improve overall sales performance.
 # Project Focus
 The project focuses on identifying top-selling products, revenue trends, regional sales performance,
   and average order value to support data-driven business decisions.
+
+SQL Queries
+  
+Total Sales:
+SELECT SUM(sales) AS total_sales
+FROM orders;
+
+Top 5 Selling Products:
+
+SELECT product_name, SUM(sales) AS total_sales
+FROM orders
+GROUP BY product_name
+ORDER BY total_sales DESC
+LIMIT 5;
+
+Sales by Region:
+  
+SELECT region, SUM(sales) AS regional_sales
+FROM orders
+GROUP BY region
+ORDER BY regional_sales DESC;
+
+
+Average Order Value:
+SELECT AVG(sales) AS avg_order_value
+FROM orders;
+
+Monthly Sales Trend:
+
+SELECT MONTH(order_date) AS month,
+SUM(sales) AS monthly_sales
+FROM orders
+GROUP BY MONTH(order_date)
+ORDER BY month;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
